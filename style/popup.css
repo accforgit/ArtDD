@@ -1,0 +1,90 @@
+:root {
+  --primary: #1890ff;
+  --success: #52c41a;
+  --error: #F65656;
+}
+.app_wrapper {
+  max-width: 600px;
+  padding: 20px 40px;
+  white-space: nowrap;
+}
+.app_wrapper button {
+  padding: 6px 20px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  touch-action: manipulation;
+  background-color: var(--primary);
+}
+.app_wrapper button:hover,
+.app_wrapper button:focus {
+  background-color: #40a9ff;
+}
+.app_wrapper button:active {
+  background-color: #096dd9;
+}
+.app_wrapper button.btn_disabled {
+  cursor: not-allowed;
+  color: rgba(0,0,0,.25);
+  background: #f5f5f5;
+  border-color: #d9d9d9;
+}
+
+#download_current {
+  margin-right: 8px;
+}
+
+.pic_download_label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+  cursor: pointer;
+  font-size: 0;
+}
+#pic_download_check {
+  margin: 0;
+  margin-right: 4px;
+}
+.pic_download_label input,
+.pic_download_label span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  user-select: none;
+}
+
+#error_list, #info_list {
+  padding: 0;
+}
+#error_list li {
+  white-space: normal;
+  word-break: break-all;
+}
+.error_li {
+  color: var(--error);
+}
+.download_item_detail_content {
+  margin: 0;
+}
+.download_total_count {
+  color: var(--primary)
+}
+.download_success_count {
+  color: var(--success);
+}
+.download_failed_count {
+  color: var(--error);
+}
+#error_issue {
+  color: var(--primary);
+  cursor: pointer;
+  user-select: none;
+}
+
+#download_state {
+  display: none;
+}
+

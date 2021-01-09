@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="origin">
+  <title>ArtDD</title>
+  <link rel="stylesheet" href="../style/popup.css">
+</head>
+<body>
+  <div class="app_wrapper">
+    <button id="download_current">下载当前文章</button>
+    <button id="download_author">下载当前作者所有文章</button>
+    <button id="download_cancle" title="已经进入下载队列的无法取消">取消下载</button>
+    <label class="pic_download_label" for="pic_download_check">
+      <input type="checkbox" id="pic_download_check" checked="checked" />
+      <span>下载图片</span>
+    </label>
+    <ul id="info_list">
+      <li>如果发生错误或者有其他疑问，可 <span id="error_issue">前往提交 issue</span>，issue 中最好带上出错文章的链接</li>
+      <li class="download_article_item download_item_detail">
+        文章下载数据：
+        <p class="download_item_detail_content">
+          <span>总数</span>(<span class="download_total_count"></span>)
+          <span>成功</span>(<span class="download_success_count"></span>)
+          <span>失败</span>(<span class="download_failed_count"></span>)
+        </p>
+      </li>
+      <li class="download_img_item download_item_detail">
+        图片下载数据：
+        <p class="download_item_detail_content">
+          <span>总数</span>(<span class="download_total_count"></span>)
+          <span>成功</span>(<span class="download_success_count"></span>)
+          <span>失败</span>(<span class="download_failed_count"></span>)
+        </p>
+      </li>
+      <li id="download_state"></li>
+    </ul>
+    <ul id="error_list"></ul>
+  </div>
+</body>
+<script src="../js/const.js"></script>
+<script src="../js/util/index.js"></script>
+<script src="../js/popup.js"></script>
+</html>

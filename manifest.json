@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "ArtDD",
+  "version": "1.0",
+  "description": "一键下载掘金、CSDN、开源中国、博客园文章",
+  "content_scripts": [
+    {
+      "matches": ["*://juejin.cn/post/*", "*://*.csdn.net/*", "*://*.oschina.net/*", "*://*.cnblogs.com/*"],
+      "run_at": "document_end",
+      "js": [
+        "js/const.js", "js/util/turndown.js", "js/util/turndown-plugin-gfm.js", "js/util/crypto-js.js",
+        "js/content/base.js", "js/content/common.js",
+        "js/content/juejin.js", "js/content/csdn.js", "js/content/oschina.js", "js/content/cnblogs.js", "js/content/index.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": ["js/const.js", "js/background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "downloads",
+    "cookies",
+    "*://*/*"
+  ],
+  "homepage_url": "https://github.com/accforgit/ArtDD",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "images/icon48.png",
+    "default_title": "ArtDD",
+    "default_popup": "html/popup.html"
+  }
+}
